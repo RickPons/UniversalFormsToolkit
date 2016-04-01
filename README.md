@@ -37,7 +37,6 @@ public class Student
     public string LastName{ get; set; }
     public DateTime Birthday{ get; set; }
     public int Semester{ get; set; }
-    public Student
 }
 ```        
 
