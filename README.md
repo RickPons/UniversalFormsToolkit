@@ -15,3 +15,9 @@ Build Forms for UWP Windows 10
       
       Examples
       Coming soon
+      
+      Nuget
+      Available in Nuget 
+      https://www.nuget.org/packages/UniversalFormsToolkit/
+      
+      Install-Package UniversalFormsToolkit 
