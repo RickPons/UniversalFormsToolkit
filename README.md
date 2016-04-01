@@ -30,7 +30,8 @@ https://www.nuget.org/packages/UniversalFormsToolkit/
 #### 1 - Lets start with a basic class *Student*
 
 ```csharp
-public class Student {
+public class Student 
+{
     private int ID { get; private set; }
     public string FirstName { get; set; }
     public string LastName{ get; set; }
@@ -40,10 +41,11 @@ public class Student {
 }
 ```        
 
-#### 2 - We define the "annotations" in the attributes
+#### 2 - After we have installed the nuger package we define the "annotations" in the attributes
 
 ```csharp
-public class Student {
+public class Student 
+{
     //If we don't want the property to be in 
     //the form we just don't add an annotation
     private int ID { get; private set; }
@@ -66,36 +68,36 @@ public class Student {
 }
 ```
 
-#### 3 - In the MainPage you can call your class like this:
+#### 3 - In the MainPage we can call your class like this:
 
 ```csharp
 public sealed partial class MainPage : Page
+{
+    public MainPage()
     {
-        public MainPage()
+        this.InitializeComponent();
+        this.MyStudent = new Student()
         {
-            this.InitializeComponent();
-            this.MyStudent = new Student()
-            {
-                FirstName = "Ronald",
-                LastName = "Becker",
-                Birthday = new Datetime(),
-                Semester = 6
-            };
-            autogenerator.DataContext = MyStudent;
-        }
-        #region Property
-        private Student myStudent;
-        public Student MyStudent
-        {
-            get { return myStudent; }
-            set { myStudent = value; }
-        }
-        #endregion
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-        }
+            FirstName = "Ronald",
+            LastName = "Becker",
+            Birthday = new Datetime(),
+            Semester = 6
+        };
+        autogenerator.DataContext = MyStudent;
     }
+    #region Property
+    private Student myStudent;
+    public Student MyStudent
+    {
+        get { return myStudent; }
+        set { myStudent = value; }
+    }
+    #endregion
+    protected override void OnNavigatedTo(NavigationEventArgs e)
+    {
+        base.OnNavigatedTo(e);
+    }
+}
 ```
 #### 4 - Finally we set up our XAML in the next manner:
 
@@ -104,3 +106,5 @@ public sealed partial class MainPage : Page
     <autogenerator:AutoGenerator Margin="24" x:Name="autogenerator"   TitleForm="My Student"/>
 </Grid>
 ```
+
+#### 5 - Our view will look like this
