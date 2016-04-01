@@ -41,9 +41,10 @@ public class Student
 }
 ```        
 
-#### 2 - After we have installed the nuger package we define the "annotations" in the attributes
+#### 2 - After we have installed the nuget package, we must use the AutoGenerateForm.Uwp namespace and finally, we must add "annotations" to the properties of our class that we want to display in our form.
 
 ```csharp
+using AutoGenerateForm.Uwp;
 public class Student 
 {
     //If we don't want the property to be in 
@@ -99,7 +100,7 @@ public sealed partial class MainPage : Page
     }
 }
 ```
-#### 4 - Finally we set up our XAML in the next manner:
+#### 4 - Finally, we set up our XAML in the next manner:
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
