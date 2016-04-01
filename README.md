@@ -4,7 +4,7 @@ Build Forms for UWP Windows 10
 
       Features
       - Create a form based in a bussines Object
-      - Use attributes to set the order or the controls
+      - Use attributes to set the order of the controls
       - Support common controls like textbox,combobox,DateTimePicker,NumericUpdown etc..
       - Build a read only form
       - Supported a simple validation
