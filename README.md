@@ -79,8 +79,8 @@ public sealed partial class MainPage : Page
         this.InitializeComponent();
         this.MyStudent = new Student()
         {
-            FirstName = "Ronald",
-            LastName = "Becker",
+            FirstName = "Brus",
+            LastName = "Medina",
             Birthday = new Datetime(),
             Semester = 6
         };
