@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>UniversalFormsToolkit</id>
+    <version>1.0.3</version>
+    <title>UniversalFormsToolkit</title>
+    <authors>Ricardo Pons</authors>
+    <owners>Ricardo Pons</owners>
+    <description>
+      This small framework will help you to build forms fast an easy in your UWP apps.
+    </description>
+    <releaseNotes>
+      Build Forms for UWP Windows 10
+
+      Features
+      - Create a form based in a bussines Object
+      - Use attributes to set the order or the controls
+      - Support common controls like textbox,combobox,DateTimePicker,NumericUpdown etc..
+      - Build a read only form
+      - Supported a simple validation
+
+      See also
+      - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
+      - You can use your own logic to validate your bussines objects.
+   
+    </releaseNotes>
+    <summary>
+      This small framework will help you to build forms fast an easy in your UWP apps.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/RikardoPons/UniversalFormsToolkit</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/License</licenseUrl>
+    <copyright>Copyright  2016</copyright>
+    <dependencies>
+        <group targetFramework="uap10.0">
+          <dependency id="WinRTXamlToolkit.UWP" version="2.0.0" />
+        </group>
+    </dependencies>
+    <references></references>
+    <tags>Windows 10, Windows10, UAP, UWP, WinRT, XAML, Universal App, WinRT XAML Toolkit, MVVM Validation Helpers , winrtxamltoolkit </tags>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>
