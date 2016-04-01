@@ -27,7 +27,7 @@ https://www.nuget.org/packages/UniversalFormsToolkit/
 
 ## Example:
 
-1. Lets start with a basic class *Student*
+#### 1 - Lets start with a basic class *Student*
 
 ```csharp
 public class Student {
@@ -40,7 +40,7 @@ public class Student {
 }
 ```        
 
-2. We define the "annotations" in the attributes
+#### 2 - We define the "annotations" in the attributes
 
 ```csharp
 public class Student {
@@ -66,7 +66,7 @@ public class Student {
 }
 ```
 
-3. In the MainPage you can call your class like this:
+#### 3 - In the MainPage you can call your class like this:
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -97,7 +97,7 @@ public sealed partial class MainPage : Page
         }
     }
 ```
-4. Finally we set up our XAML in the next manner:
+#### 4 - Finally we set up our XAML in the next manner:
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
