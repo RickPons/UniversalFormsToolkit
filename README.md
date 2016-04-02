@@ -108,3 +108,4 @@ public sealed partial class MainPage : Page
 ```
 
 #### 5 - Our view will look like this
+![Alt text](http://s15.postimg.org/hr1s64a7f/capture.png "")
