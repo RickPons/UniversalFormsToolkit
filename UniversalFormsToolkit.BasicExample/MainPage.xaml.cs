@@ -28,8 +28,8 @@ namespace UniversalFormsToolkit.BasicExample
             this.InitializeComponent();
             this.MyStudent = new Student()
             {
-                LastName = "Becker",
-                FirstName = "Ronald",
+                LastName = "Brus",
+                FirstName = "Medina",
                 Semester = 6,
                 Birthday = new DateTime()
                 

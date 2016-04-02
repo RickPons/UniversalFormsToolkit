@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit", "Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.BasicExample", "UniversalFormsToolkit.BasicExample\UniversalFormsToolkit.BasicExample.csproj", "{8A350D11-A7AE-4881-B4E1-E229CD406FA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.CollectionsExample", "UniversalFormsToolkit.CollectionsExample\UniversalFormsToolkit.CollectionsExample.csproj", "{323417B6-6EB0-42CE-9257-E4CC38111648}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,26 @@ Global
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Release|x86.ActiveCfg = Release|x86
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Release|x86.Build.0 = Release|x86
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Release|x86.Deploy.0 = Release|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.ActiveCfg = Debug|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.Build.0 = Debug|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.Deploy.0 = Debug|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x64.ActiveCfg = Debug|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x64.Build.0 = Debug|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x64.Deploy.0 = Debug|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x86.ActiveCfg = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x86.Build.0 = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|x86.Deploy.0 = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|Any CPU.ActiveCfg = Release|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|ARM.ActiveCfg = Release|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|ARM.Build.0 = Release|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|ARM.Deploy.0 = Release|ARM
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x64.ActiveCfg = Release|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x64.Build.0 = Release|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x64.Deploy.0 = Release|x64
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.ActiveCfg = Release|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.Build.0 = Release|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

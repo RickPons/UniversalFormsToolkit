@@ -972,7 +972,7 @@ namespace AutoGenerateForm.Uwp
             DependencyProperty.Register("TitleForm", typeof(string), typeof(AutoGenerator), new PropertyMetadata(string.Empty, TitleFormPropertyChanged));
 
         private static void TitleFormPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
+         {
             var control = d as AutoGenerator;
             if (control != null)
             {

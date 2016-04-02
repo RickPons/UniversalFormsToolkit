@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="UniversalFormsToolkit.CollectionsExample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:autogenerator="using:AutoGenerateForm.Uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:UniversalFormsToolkit.CollectionsExample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="123*" />
+            <RowDefinition Height="37*" />
+        </Grid.RowDefinitions>
+        <autogenerator:AutoGenerator IsUpperCaseEnabled="False"
+            Margin="24,24,24,10"
+            DataContext="{Binding}"
+            IsTitleEnabled="True"
+            TitleForm="Group" />
+        <StackPanel Margin="24" Grid.Row="1">
+            <TextBlock Text="{Binding MyGroup.GroupName, Mode=TwoWay}" />
+            <TextBlock Text="{Binding MyGroup.SelectedStudent.Name, Mode=TwoWay}" />
+        </StackPanel>
+    </Grid>
+</Page>

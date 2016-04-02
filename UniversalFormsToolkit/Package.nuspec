@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -10,6 +10,8 @@
       This small framework will help you to build forms fast and easy in your UWP apps.
     </description>
     <releaseNotes>
+      https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/README.md
+
       Build Forms for UWP Windows 10
 
       Features
@@ -22,10 +24,13 @@
       See also
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
+
+      1.07 
+      fixed minor bugs
       
       1.0.6
       Fixed problems with the title of the form
-   
+
     </releaseNotes>
     <summary>
       This small framework will help you to build forms fast an easy in your UWP apps.
@@ -42,7 +47,7 @@
         </group>
     </dependencies>
     <references></references>
-    <tags>Windows 10, Windows10, UAP, UWP, WinRT, XAML, Universal App, WinRT XAML Toolkit, MVVM Validation Helpers , winrtxamltoolkit </tags>
+    <tags>Windows 10, Universal Forms, universalFormstoolkit, form ,  Windows10, UAP, UWP, WinRT, XAML, Universal App, WinRT XAML Toolkit, MVVM Validation Helpers , winrtxamltoolkit </tags>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
