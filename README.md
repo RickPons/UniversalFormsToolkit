@@ -108,3 +108,4 @@ public sealed partial class MainPage : Page
 ```
 
 #### 5 - Our view will look like this
+![]({{site.baseurl}}//capture.png)
