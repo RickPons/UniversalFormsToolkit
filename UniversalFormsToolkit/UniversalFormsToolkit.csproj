@@ -63,8 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\" />
-    <Folder Include="lib\uap10.0\" />
     <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\uap10.0\AutoGenerateForm.Attributes.dll" />
+    <Content Include="lib\uap10.0\AutoGenerateForm.Helpers.dll" />
+    <Content Include="lib\uap10.0\AutoGenerateForm.Uwp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
