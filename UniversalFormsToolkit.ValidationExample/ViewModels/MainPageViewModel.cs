@@ -57,7 +57,7 @@ namespace UniversalFormsToolkit.ValidationExample.ViewModels
                 {
                      Age=20,
                       Name="Ricardo",
-                       BirthDay= new System.DateTime(1996,12,20),
+                       BirthDay= null,
                        LastName="Pons",
                         Courses= new ObservableCollection<Course>(list)
                 },

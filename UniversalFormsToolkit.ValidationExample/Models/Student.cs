@@ -109,11 +109,11 @@ namespace UniversalFormsToolkit.ValidationExample.Models
             }
         }
 
-        private DateTime birthDay;
+        private DateTime? birthDay;
 
         [AutoGenerateProperty]
         [Display("Birthday")]
-        public DateTime BirthDay
+        public DateTime? BirthDay
         {
             get { return birthDay; }
             set

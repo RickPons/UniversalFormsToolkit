@@ -14,7 +14,7 @@ namespace AutoGenerateForm.Uwp.Converters
             }
             catch (Exception ex)
             {
-                return DateTimeOffset.MinValue;
+                return DateTimeOffset.Now;
             }
         }
 
@@ -27,7 +27,7 @@ namespace AutoGenerateForm.Uwp.Converters
             }
             catch (Exception ex)
             {
-                return DateTime.MinValue;
+                return DateTime.Now;
             }
         }
     }

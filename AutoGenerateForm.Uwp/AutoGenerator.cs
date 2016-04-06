@@ -227,8 +227,12 @@ namespace AutoGenerateForm.Uwp
             scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
             stackPanel.Margin = new Thickness(0, 0, 0, 24);
             scroll.Content = stackPanel;
-            // stackPanel.Children.Clear();
+            stackPanel.Children.Clear();
 
+            if (IsTitleEnabled)
+            {
+                TitleTextBlock(this.TitleForm);
+            }
             this.Content = scroll;
             if (this.CurrentDataContext != null)
             {
