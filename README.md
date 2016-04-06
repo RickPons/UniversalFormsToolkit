@@ -115,7 +115,7 @@ public sealed partial class MainPage : Page
 
 
 #### 6 - Master - Details & Validations using MVVM Validation Helpers(https://www.nuget.org/packages/MvvmValidation/2.0.2)
-# You can use your own validation logic. 
+###### You can use your own validation logic. 
 
 ##### 7 - We need to implement IValidatable  and INotifyDataErrorInfo to our model.
 ```csharp
