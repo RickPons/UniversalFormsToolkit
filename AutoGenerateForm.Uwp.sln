@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.Basic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.CollectionsExample", "UniversalFormsToolkit.CollectionsExample\UniversalFormsToolkit.CollectionsExample.csproj", "{323417B6-6EB0-42CE-9257-E4CC38111648}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.ValidationExample", "UniversalFormsToolkit.ValidationExample\UniversalFormsToolkit.ValidationExample.csproj", "{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,26 @@ Global
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.ActiveCfg = Release|x86
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.Build.0 = Release|x86
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Release|x86.Deploy.0 = Release|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|ARM.Build.0 = Debug|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x64.ActiveCfg = Debug|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x64.Build.0 = Debug|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x64.Deploy.0 = Debug|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x86.ActiveCfg = Debug|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x86.Build.0 = Debug|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Debug|x86.Deploy.0 = Debug|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|Any CPU.ActiveCfg = Release|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|ARM.ActiveCfg = Release|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|ARM.Build.0 = Release|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|ARM.Deploy.0 = Release|ARM
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x64.ActiveCfg = Release|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x64.Build.0 = Release|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x64.Deploy.0 = Release|x64
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.ActiveCfg = Release|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.Build.0 = Release|x86
+		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
