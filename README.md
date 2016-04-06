@@ -114,7 +114,8 @@ public sealed partial class MainPage : Page
 ![Alt text](http://s15.postimg.org/hr1s64a7f/capture.png "")
 
 
-#### 6 - Validations using MVVM Validation Helpers(https://www.nuget.org/packages/MvvmValidation/2.0.2)
+#### 6 - Master - Details & Validations using MVVM Validation Helpers(https://www.nuget.org/packages/MvvmValidation/2.0.2)
+# You can use your own validation logic. 
 
 ##### 7 - We need to implement IValidatable  and INotifyDataErrorInfo to our model.
 ```csharp
@@ -546,4 +547,4 @@ public sealed partial class MainPage : Page
 ```
 
 #### 11 - Our view will look like this
-![Alt text](http://s15.postimg.org/hr1s64a7f/capture.png "")
+![Alt text](http://s17.postimg.org/q9e5ym1xb/validations.png "")
