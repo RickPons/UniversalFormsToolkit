@@ -131,6 +131,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoGenerateForm.Attributes\AutoGenerateForm.Attributes.csproj">
+      <Project>{82ec126f-ca70-4b5e-8759-1c58e9ce2c39}</Project>
+      <Name>AutoGenerateForm.Attributes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AutoGenerateForm.Helpers\AutoGenerateForm.Helpers.csproj">
       <Project>{e60d88d4-7b9c-4285-8e62-26c2e7e2a88a}</Project>
       <Name>AutoGenerateForm.Helpers</Name>

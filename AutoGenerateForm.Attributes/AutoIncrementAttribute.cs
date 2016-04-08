@@ -10,7 +10,7 @@ namespace AutoGenerateForm.Attributes
 
         public AutoIncrementAttribute(double step = 1)
         {
-
+            this.Step = step;
         }
     }
 }

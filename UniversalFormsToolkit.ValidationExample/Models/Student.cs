@@ -14,8 +14,18 @@ namespace UniversalFormsToolkit.ValidationExample.Models
     public class Student : PropertyChangeBase, IValidatable, INotifyDataErrorInfo
     {
 
-     
-        
+
+        private bool hideBirthday;
+
+        public bool HideBirthDay
+        {
+            get { return hideBirthday; }
+            set
+            {
+                hideBirthday = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         private string name;
 
@@ -65,6 +75,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         private string phoneNumber;
         [AutoGenerateProperty]
         [Display("Phone Number")]
+        [StringLength(4)]
         public string PhoneNumber
         {
             get
@@ -113,6 +124,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
 
         [AutoGenerateProperty]
         [Display("Birthday")]
+        [IsVisible("HideBirthDay")]
         public DateTime? BirthDay
         {
             get { return birthDay; }

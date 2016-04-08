@@ -17,11 +17,13 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="31*" />
-                <RowDefinition Height="329*" />
+                <RowDefinition Height="300*" />
+                <RowDefinition Height="29*" />
             </Grid.RowDefinitions>
             <TextBlock FontSize="26">My Group</TextBlock>
             <ListView
                 Grid.Row="1"
+                Margin="0,0,0,7.326"
                 ItemsSource="{Binding MyGroup.Students, Mode=TwoWay}"
                 SelectedItem="{Binding SelectedStudent, Mode=TwoWay}">
                 <ListView.ItemTemplate>
@@ -30,23 +32,19 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <Button Grid.Row="2" Command="{Binding HideCommand}">Hid Birth Day Field</Button>
         </Grid>
         <autogenerator:AutoGenerator
+            x:Name="form"
             Grid.Column="1"
             Margin="24"
             CurrentDataContext="{Binding SelectedStudent, Mode=TwoWay}"
             ValidationCollection="{Binding SelectedStudent.Validations, Mode=TwoWay}" />
 
-        <ListView Grid.Column="2" Margin="12" ItemsSource="{Binding SelectedStudent.Validations,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Label, Mode=TwoWay}" Foreground="Red" />
-                        <TextBlock Text="{Binding ErrorMessage, Mode=TwoWay}" Margin="0,8,0,0"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <autogenerator:ValidationSummary
+            Grid.Column="2"
+            AutoGenerator="{Binding ElementName=form}"
+            ValidationCollection="{Binding SelectedStudent.Validations, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
     </Grid>
 </Page>

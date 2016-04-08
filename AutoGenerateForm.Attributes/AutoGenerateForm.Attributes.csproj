@@ -60,6 +60,7 @@
     <Compile Include="PropertyOrderAttribute.cs" />
     <Compile Include="RangeAttribute.cs" />
     <Compile Include="SelectedItemCollectionAttribute.cs" />
+    <Compile Include="StringLengthAttribute.cs" />
     <Compile Include="SubtitleAttribute.cs" />
   </ItemGroup>
   <ItemGroup>

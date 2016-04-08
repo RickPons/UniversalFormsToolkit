@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UniversalFormsToolkit.ValidationExample.Models;
+using System;
 
 namespace UniversalFormsToolkit.ValidationExample.ViewModels
 {
     public class MainPageViewModel: PropertyChangeBase
     {
 
-       
+        public RelayCommand HideCommand { get; set; }
+
 
         private Models.Group myGroup;
 
@@ -36,7 +38,7 @@ namespace UniversalFormsToolkit.ValidationExample.ViewModels
 
         public MainPageViewModel()
         {
-
+            HideCommand = new RelayCommand(HideCommandExecute);
             var list = new List<Course>()
             {
                  new Course
@@ -81,6 +83,12 @@ namespace UniversalFormsToolkit.ValidationExample.ViewModels
             
         }
 
-     
+        private void HideCommandExecute()
+        {
+            if (SelectedStudent != null)
+            {
+                SelectedStudent.HideBirthDay = SelectedStudent.HideBirthDay ? false : true;
+            }
+        }
     }
 }

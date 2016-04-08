@@ -112,6 +112,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoGenerator.cs" />
+    <Compile Include="Behaviors\Behavior.cs" />
+    <Compile Include="Behaviors\SetFocusFromPropertyBehavior.cs" />
+    <Compile Include="Controls\FieldContainerControl.cs" />
+    <Compile Include="ValidationSummary.xaml.cs">
+      <DependentUpon>ValidationSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\BoolToYesNoConverter.cs" />
     <Compile Include="Converters\DateTimeToDateTimeOffsetConverter.cs" />
     <Compile Include="Events\FormCreatedEventArgs.cs" />
@@ -130,6 +137,19 @@
       <Project>{e60d88d4-7b9c-4285-8e62-26c2e7e2a88a}</Project>
       <Name>AutoGenerateForm.Helpers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AutoGenerator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ValidationSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
