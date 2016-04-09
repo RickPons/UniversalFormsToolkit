@@ -111,7 +111,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoGenerator.cs" />
+    <Compile Include="AutoGenerator.xaml.cs">
+      <DependentUpon>AutoGenerator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Behaviors\Behavior.cs" />
     <Compile Include="Behaviors\SetFocusFromPropertyBehavior.cs" />
     <Compile Include="Controls\FieldContainerControl.cs" />

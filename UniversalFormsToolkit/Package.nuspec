@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.11-alpha</version>
+    <version>1.0.11-alpha7</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -46,7 +46,8 @@
     <dependencies>
         <group targetFramework="uap10.0">
           <dependency id="winrtxamltoolkit" version="2.0.0" />
-          <dependency id="Callisto" />
+          <dependency id="Callisto"  version="1.4.0"/>
+          <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="1.1.0"/>
         </group>
     </dependencies>
     <references></references>

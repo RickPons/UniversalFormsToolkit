@@ -28,7 +28,7 @@ namespace AutoGenerateForm.Uwp
         public TypeSwitch Case<T>(Action<T> action) { matches.Add(typeof(T), (x) => action((T) x)); return this; }
         public void Switch(object x) { matches[x.GetType()](x); }
     }
-     public sealed partial class AutoGenerator : UserControl
+     public sealed partial class _AutoGenerator : UserControl
     {
         private StackPanel stackPanel = null;
 
@@ -40,7 +40,7 @@ namespace AutoGenerateForm.Uwp
         private bool isRefreshed, isReset;
        
         public event EventHandler<FormCreatedEventArgs> OnFormCreated;
-        public AutoGenerator()
+        public _AutoGenerator()
 
         {
             if (!DesignMode.DesignModeEnabled)
@@ -74,11 +74,11 @@ namespace AutoGenerateForm.Uwp
 
         // Using a DependencyProperty as the backing store for CurrentDataContext.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CurrentDataContextProperty =
-            DependencyProperty.Register("CurrentDataContext", typeof(object), typeof(AutoGenerator), new PropertyMetadata(null, CurrentDataContextPropertyChanged));
+            DependencyProperty.Register("CurrentDataContext", typeof(object), typeof(_AutoGenerator), new PropertyMetadata(null, CurrentDataContextPropertyChanged));
 
         private static void CurrentDataContextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = d as AutoGenerator;
+            var control = d as _AutoGenerator;
             if (control == null)
                 return;
             if (e.OldValue == null && e.NewValue != null)
@@ -1314,11 +1314,11 @@ namespace AutoGenerateForm.Uwp
 
         // Using a DependencyProperty as the backing store for TitleForm.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TitleFormProperty =
-            DependencyProperty.Register("TitleForm", typeof(string), typeof(AutoGenerator), new PropertyMetadata(string.Empty, TitleFormPropertyChanged));
+            DependencyProperty.Register("TitleForm", typeof(string), typeof(_AutoGenerator), new PropertyMetadata(string.Empty, TitleFormPropertyChanged));
 
         private static void TitleFormPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = d as AutoGenerator;
+            var control = d as _AutoGenerator;
             if (control != null)
             {
                 if (control.IsTitleEnabled && e.NewValue != null && !string.IsNullOrEmpty(e.NewValue.ToString()))
@@ -1342,7 +1342,7 @@ namespace AutoGenerateForm.Uwp
 
         // Using a DependencyProperty as the backing store for IsTitleEnabled.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsTitleEnabledProperty =
-            DependencyProperty.Register("IsTitleEnabled", typeof(bool), typeof(AutoGenerator), new PropertyMetadata(false));
+            DependencyProperty.Register("IsTitleEnabled", typeof(bool), typeof(_AutoGenerator), new PropertyMetadata(false));
 
 
 
@@ -1354,7 +1354,7 @@ namespace AutoGenerateForm.Uwp
 
         // Using a DependencyProperty as the backing store for isUpperCaseEnabled.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsUpperCaseEnabledProperty =
-            DependencyProperty.Register("IsUpperCaseEnabled", typeof(bool), typeof(AutoGenerator), new PropertyMetadata(true));
+            DependencyProperty.Register("IsUpperCaseEnabled", typeof(bool), typeof(_AutoGenerator), new PropertyMetadata(true));
 
 
 
@@ -1366,11 +1366,11 @@ namespace AutoGenerateForm.Uwp
 
         // Using a DependencyProperty as the backing store for ValidationCollection.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ValidationCollectionProperty =
-            DependencyProperty.Register("ValidationCollection", typeof(ICollection<ValidationModel>), typeof(AutoGenerator), new PropertyMetadata(null, ValidationCollectionPropertyChanged));
+            DependencyProperty.Register("ValidationCollection", typeof(ICollection<ValidationModel>), typeof(_AutoGenerator), new PropertyMetadata(null, ValidationCollectionPropertyChanged));
 
         private static void ValidationCollectionPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = d as AutoGenerator;
+            var control = d as _AutoGenerator;
             if (control == null)
                 return;
             if (control.isLoaded)

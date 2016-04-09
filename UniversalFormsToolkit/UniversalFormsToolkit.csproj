@@ -52,6 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="lib\uap10.0\AutoGenerateForm.Uwp.pri" />
+    <None Include="lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerator.xbf" />
+    <None Include="lib\uap10.0\AutoGenerateForm.Uwp\ValidationSummary.xbf" />
     <None Include="NuGetPackage.ps1" />
     <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
@@ -69,6 +72,7 @@
     <Content Include="lib\uap10.0\AutoGenerateForm.Attributes.dll" />
     <Content Include="lib\uap10.0\AutoGenerateForm.Helpers.dll" />
     <Content Include="lib\uap10.0\AutoGenerateForm.Uwp.dll" />
+    <Content Include="lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerateForm.Uwp.xr.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
