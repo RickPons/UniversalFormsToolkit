@@ -83,9 +83,7 @@ public sealed partial class MainPage : Page
             Birthday = new Datetime(),
             Semester = 6
         };
-        //Version Stable 1.0.7
-         autogenerator.DataContext = MyStudent;
-        //Breaking change 1.0.8 -alpha
+      
        // autogenerator.CurrentDataContext = MyStudent;
     }
     #region Property
