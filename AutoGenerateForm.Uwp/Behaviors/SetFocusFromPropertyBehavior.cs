@@ -111,24 +111,12 @@ namespace AutoGenerateForm.Uwp.Behaviors
                 Debug.WriteLine(" scrollviewer not found");
                 return;
             }
-            ListViewItem listViewItem = null;
-            var children = listView.GetDescendantsOfType<ListViewItem>();
-            if (children == null)
-            {
-                Debug.WriteLine(" listview items not found");
-                return;
-            }
-            foreach (var child in children)
-            {
-                var c = child.FindName(item.Name);
-                if(c!=null)
-                {
-                    listViewItem = child;
-                    break;
-                }
-               
 
-            }
+            var field = item.GetAncestorsOfType<Controls.FieldContainerControl>().FirstOrDefault();
+
+            ListViewItem listViewItem = null;
+            listViewItem = listView.ContainerFromItem(field) as ListViewItem;
+           
             // Calculations relative to screen or ListView
           
            

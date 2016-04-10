@@ -5,8 +5,7 @@
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "Microsoft.NETNative.Analyzer": "1.0.0",
-    "MvvmValidation": "2.0.2",
-    "UniversalFormsToolkit": "1.0.11-alpha7"
+    "MvvmValidation": "2.0.2"
   },
   "frameworks": {
     "uap10.0": {}

@@ -76,6 +76,8 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [AutoGenerateProperty]
         [Display("Phone Number")]
         [StringLength(4)]
+        [IsVisible("HideBirthDay")]
+        [Subtitle("My Subtitle")]
         public string PhoneNumber
         {
             get
@@ -124,7 +126,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
 
         [AutoGenerateProperty]
         [Display("Birthday")]
-        [IsVisible("HideBirthDay")]
+      
         public DateTime? BirthDay
         {
             get { return birthDay; }
