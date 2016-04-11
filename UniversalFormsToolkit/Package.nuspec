@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.11-alpha8</version>
+    <version>1.0.11</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -25,6 +25,11 @@
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
 
+      1.0.11 Added more features
+      - Summary control
+      - Improved performance
+      - Fixed some bugs with some attributes
+      
       1.0.9 Fixed bugs with nullable datetime 
       
       1.07 

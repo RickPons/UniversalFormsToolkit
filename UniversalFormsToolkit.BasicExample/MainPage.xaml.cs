@@ -35,7 +35,7 @@ namespace UniversalFormsToolkit.BasicExample
                 
 
             };
-            autogenerator.DataContext = MyStudent;
+            autogenerator.CurrentDataContext = MyStudent;
         }
 
         #region Property
