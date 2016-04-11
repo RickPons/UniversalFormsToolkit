@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <autogenerator:AutoGenerator IsUpperCaseEnabled="False"
             Margin="24,24,24,10"
-            DataContext="{Binding}"
+            CurrentDataContext="{Binding}"
             IsTitleEnabled="True"
             TitleForm="Group" />
         <StackPanel Margin="24" Grid.Row="1">
