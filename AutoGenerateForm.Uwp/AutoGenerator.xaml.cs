@@ -30,7 +30,6 @@ namespace AutoGenerateForm.Uwp
     }
     public sealed partial class AutoGenerator : UserControl
     {
-        private StackPanel stackPanel = null;
 
         private ObservableCollection<Controls.FieldContainerControl> fields = null;
 
@@ -47,7 +46,7 @@ namespace AutoGenerateForm.Uwp
             if (!DesignMode.DesignModeEnabled)
             {
 
-                this.stackPanel = new StackPanel();
+            
                 this.fields = new ObservableCollection<Controls.FieldContainerControl>();
                 dispatcher = CoreApplication.MainView.CoreWindow.Dispatcher;
                 this.OnFormCreated += AutoGenerator_OnFormCreated;
@@ -88,7 +87,8 @@ namespace AutoGenerateForm.Uwp
                     }
                     else
                     {
-
+                        control.listView.ItemsSource = null;
+                        control.listView.ItemsSource = control.fields;
 
                         foreach (var item in control.listView.Items)
                         {
@@ -273,11 +273,12 @@ namespace AutoGenerateForm.Uwp
         {
             await Task.Delay(500);
 
-            listView.ItemsSource = fields;
             if (IsTitleEnabled)
             {
                 TitleTextBlock(this.TitleForm);
             }
+            listView.ItemsSource = fields;
+           
             //this.Content = scroll;
             this.Content = listView;
             if (this.CurrentDataContext != null)
@@ -581,14 +582,12 @@ namespace AutoGenerateForm.Uwp
             {
                 label.Text = property.Name;
             }
+            object sub = null;
             var subTitleAttribute = Helpers.AttributeHelper<SubtitleAttribute>.GetAttributeValue(property);
             if (subTitleAttribute != null)
             {
-                var sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
-                if (sub != null)
-                {
-                    stackPanel.Children.Add(sub);
-                }
+                sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
+
             }
             var isEnabledAttribute = Helpers.AttributeHelper<IsEnabledPropertyAttribute>.GetAttributeValue(property);
             if (isEnabledAttribute != null)
@@ -623,20 +622,18 @@ namespace AutoGenerateForm.Uwp
                     }
                 }
             }
-            //CheckIsVisible(num, parentProperty, property);
-            //SetVisibilityBinding(label, num);
-            //SetVisibilityBinding(txterror, num);
-            //stackPanel.Children.Add(label);
-            //stackPanel.Children.Add(num);
-            //stackPanel.Children.Add(txterror);
+      
 
             await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 var field = new Controls.FieldContainerControl();
+                if (sub != null)
+                {
+                    field.Stack.Children.Add((TextBlock)sub);
+                }
                 field.Stack.Children.Add(label);
                 field.Stack.Children.Add(num);
                 field.Stack.Children.Add(txterror);
-                CheckIsVisible(field, parentProperty, property);
                 fields.Add(field);
             });
 
@@ -751,7 +748,6 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(label);
                 field.Stack.Children.Add(combo);
                 field.Stack.Children.Add(txterror);
-                CheckIsVisible(field, parentProperty, property);
                 fields.Add(field);
             });
             //CheckIsVisible(combo, parentProperty, property);
@@ -857,23 +853,24 @@ namespace AutoGenerateForm.Uwp
             {
                 label.Text = property.Name;
             }
+            object sub = null;
             var subTitleAttribute = Helpers.AttributeHelper<SubtitleAttribute>.GetAttributeValue(property);
             if (subTitleAttribute != null)
             {
-                var sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
-                if (sub != null)
-                {
-                    stackPanel.Children.Add(sub);
-                }
+                sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
+
             }
 
             await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 var field = new Controls.FieldContainerControl();
+                if (sub != null)
+                {
+                    field.Stack.Children.Add((TextBlock)sub);
+                }
                 field.Stack.Children.Add(label);
                 field.Stack.Children.Add(num);
                 field.Stack.Children.Add(txterror);
-                CheckIsVisible(field, parentProperty, property);
                 fields.Add(field);
             });
 
@@ -1110,7 +1107,6 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(label);
                 field.Stack.Children.Add(picker);
                 field.Stack.Children.Add(txterror);
-                CheckIsVisible(field, parentProperty, property);
                 fields.Add(field);
             });
 
@@ -1189,12 +1185,7 @@ namespace AutoGenerateForm.Uwp
                  sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
                 
             }
-            //CheckIsVisible(box, parentProperty, property);
-            //SetVisibilityBinding(label, box);
-            //SetVisibilityBinding(txterror, box);
-            //stackPanel.Children.Add(label);
-            //stackPanel.Children.Add(box);
-            //stackPanel.Children.Add(txterror);
+         
 
             await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
@@ -1208,7 +1199,6 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(box);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
-                CheckIsVisible(field, parentProperty, property);
             });
 
 
@@ -1262,14 +1252,14 @@ namespace AutoGenerateForm.Uwp
 
         private void TitleTextBlock(string title)
         {
-            if (!string.IsNullOrEmpty(title) && stackPanel != null)
+            if (!string.IsNullOrEmpty(title) && fields!= null)
             {
                 TextBlock txt = new TextBlock();
                 txt.Text = title.ToUpper();
                 txt.FontWeight = FontWeights.Bold;
                 txt.FontSize = 18;
                 txt.Margin = new Thickness(0, 5, 0, 5);
-                stackPanel.Children.Insert(0, txt);
+                fields.Add(new Controls.FieldContainerControl() { Content = txt });
             }
         }
         private void SetVisibilityBinding(TextBlock txt, Control control)

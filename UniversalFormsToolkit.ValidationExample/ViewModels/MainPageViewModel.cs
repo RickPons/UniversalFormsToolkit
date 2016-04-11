@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UniversalFormsToolkit.ValidationExample.Models;
 using System;
+using System.Linq;
 
 namespace UniversalFormsToolkit.ValidationExample.ViewModels
 {
@@ -79,8 +80,18 @@ namespace UniversalFormsToolkit.ValidationExample.ViewModels
                 }
             };
 
+            SelectedStudent = this.MyGroup.Students.FirstOrDefault();
+            if (SelectedStudent != null)
+            {
+                SelectedStudent.PropertyChanged += SelectedStudent_PropertyChanged;
+                SelectedStudent.SelectedCourse = SelectedStudent.Courses.FirstOrDefault();
+            }
             
-            
+        }
+
+        private void SelectedStudent_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+           
         }
 
         private void HideCommandExecute()
