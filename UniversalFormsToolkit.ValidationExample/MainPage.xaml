@@ -37,7 +37,7 @@
         <autogenerator:AutoGenerator
             x:Name="form"
             Grid.Column="1"
-            Margin="24"
+            Margin="24",
             CurrentDataContext="{Binding SelectedStudent, Mode=TwoWay}" TitleForm="test" IsTitleEnabled="True"
             ValidationCollection="{Binding SelectedStudent.Validations, Mode=TwoWay}" />
 

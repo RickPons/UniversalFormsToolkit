@@ -66,7 +66,7 @@ namespace AutoGenerateForm.Uwp
         public static readonly DependencyProperty CurrentDataContextProperty =
             DependencyProperty.Register("CurrentDataContext", typeof(object), typeof(AutoGenerator), new PropertyMetadata(null, CurrentDataContextPropertyChanged));
 
-        private static void CurrentDataContextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static async void CurrentDataContextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var control = d as AutoGenerator;
             if (control == null)
@@ -97,9 +97,12 @@ namespace AutoGenerateForm.Uwp
                             {
                                 control.SetVisibilityListViewItem(element);
                                 control.RefreshBinding(element, e.NewValue);
+                               
                             }
 
                         }
+                        await Task.Delay(control.ValidationDelay);
+                        control.UpdateErrorFields(control.ValidationCollection);
                     }
 
                 }
@@ -109,7 +112,7 @@ namespace AutoGenerateForm.Uwp
 
         private async void AutoGenerator_OnFormCreated(object sender, FormCreatedEventArgs e)
         {
-            await Task.Delay(1000);
+            await Task.Delay(ValidationDelay);
             isLoaded = true;
             UpdateErrorFields(this.ValidationCollection);
 
@@ -1309,6 +1312,17 @@ namespace AutoGenerateForm.Uwp
 
 
         }
+
+        public TimeSpan ValidationDelay
+        {
+            get { return (TimeSpan) GetValue(ValidationDelayProperty); }
+            set { SetValue(ValidationDelayProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ValidationDelay.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ValidationDelayProperty =
+            DependencyProperty.Register("ValidationDelay", typeof(TimeSpan), typeof(AutoGenerator), new PropertyMetadata(TimeSpan.FromSeconds(1)));
+
 
         public string TitleForm
         {
