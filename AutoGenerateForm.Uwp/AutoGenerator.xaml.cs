@@ -768,23 +768,6 @@ namespace AutoGenerateForm.Uwp
             var num = new Callisto.Controls.NumericUpDown();
             var binding = new Binding();
             TextBlock txterror;
-            if (parentProperty != null)
-            {
-                binding.Path = new PropertyPath(parentProperty.Name + "." + property.Name);
-                num.Name = parentProperty.Name + "_" + property.Name;
-                txterror = GenerateErrorField(num.Name);
-            }
-            else
-            {
-                binding.Path = new PropertyPath(property.Name);
-                num.Name = property.Name;
-                txterror = GenerateErrorField(num.Name);
-            }
-            binding.Source = CurrentDataContext;
-            binding.Mode = BindingMode.TwoWay;
-            // binding.NotifyOnValidationError = true;
-            binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
-            num.SetBinding(Callisto.Controls.NumericUpDown.ValueProperty, binding);
 
             var decimalCount = Helpers.AttributeHelper<DecimalCountAttribute>.GetAttributeValue(property);
             if (decimalCount != null)
@@ -813,6 +796,25 @@ namespace AutoGenerateForm.Uwp
                 num.Maximum = range.Max;
             }
 
+            if (parentProperty != null)
+            {
+                binding.Path = new PropertyPath(parentProperty.Name + "." + property.Name);
+                num.Name = parentProperty.Name + "_" + property.Name;
+                txterror = GenerateErrorField(num.Name);
+            }
+            else
+            {
+                binding.Path = new PropertyPath(property.Name);
+                num.Name = property.Name;
+                txterror = GenerateErrorField(num.Name);
+            }
+            binding.Source = CurrentDataContext;
+            binding.Mode = BindingMode.TwoWay;
+            // binding.NotifyOnValidationError = true;
+            binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+            num.SetBinding(Callisto.Controls.NumericUpDown.ValueProperty, binding);
+
+            
             var isEnabledAttribute = Helpers.AttributeHelper<IsEnabledPropertyAttribute>.GetAttributeValue(property);
             if (isEnabledAttribute != null)
             {

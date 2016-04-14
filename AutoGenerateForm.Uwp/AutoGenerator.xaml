@@ -29,9 +29,11 @@
                 </Setter>
             </Style>
         </ListView.ItemContainerStyle>
-        <ListView>
-
-        </ListView>
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel></StackPanel>
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
 
     </ListView>
 </UserControl>
