@@ -275,7 +275,7 @@ namespace AutoGenerateForm.Uwp
         private async void GenerateAutoFormControl()
         {
             await Task.Delay(500);
-
+            fields = new ObservableCollection<Controls.FieldContainerControl>();
             if (IsTitleEnabled)
             {
                 TitleTextBlock(this.TitleForm);
