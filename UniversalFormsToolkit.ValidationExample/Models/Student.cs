@@ -139,6 +139,18 @@ namespace UniversalFormsToolkit.ValidationExample.Models
             }
         }
 
+        private bool isGraduated;
+        [AutoGenerateProperty]
+        [Display("Is Graduated")]
+        public bool IsGraduated
+        {
+            get { return isGraduated; }
+            set
+            {
+                isGraduated = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         #region Validations
 

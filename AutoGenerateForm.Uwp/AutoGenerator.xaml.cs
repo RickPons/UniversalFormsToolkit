@@ -163,10 +163,11 @@ namespace AutoGenerateForm.Uwp
                 binding0.Path = bindexpr0.ParentBinding.Path;
                 container.SetBinding(Controls.FieldContainerControl.VisibilityProperty, binding0);
             }
-
+            
             var controls = container.Stack.Children.Where(x => x.GetType().GetTypeInfo().BaseType == typeof(Control) ||
             x.GetType().GetTypeInfo().BaseType == typeof(Selector) ||
-            x.GetType().GetTypeInfo().BaseType == typeof(RangeBase));
+            x.GetType().GetTypeInfo().BaseType == typeof(RangeBase) ||
+            x.GetType().GetTypeInfo().BaseType == typeof(ToggleButton));
             if (controls == null)
                 return;
             foreach (var item in controls)
@@ -256,13 +257,20 @@ namespace AutoGenerateForm.Uwp
              })
              .Case((CheckBox x) =>
              {
-                 BindingExpression bindexpr = x.GetBindingExpression(CheckBox.IsCheckedProperty);
-                 if (bindexpr != null && bindexpr.ParentBinding != null)
-                 {
-                     binding.Path = bindexpr.ParentBinding.Path;
-                     x.SetBinding(CheckBox.IsCheckedProperty, binding);
-                 }
 
+                 BindingExpression bindExp = x.GetBindingExpression(CheckBox.IsCheckedProperty);
+                 Binding bind = bindExp.ParentBinding;
+
+                 if (bind != null)
+                 {
+                     var binding2 = new Binding();
+                     binding2.Path = bind.Path;
+                     binding2.Source = newContext;
+                     binding2.Mode = BindingMode.TwoWay;
+                     binding2.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+                     x.SetBinding(CheckBox.IsCheckedProperty, binding2);
+                 }
+               
              });
 
 
