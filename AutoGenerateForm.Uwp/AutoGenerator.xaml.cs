@@ -646,6 +646,7 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(num);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
             });
 
         }
@@ -760,6 +761,7 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(combo);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
             });
             //CheckIsVisible(combo, parentProperty, property);
             //SetVisibilityBinding(label, combo);
@@ -885,6 +887,7 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(num);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
             });
 
             // CheckIsVisible(num, parentProperty, property);
@@ -1121,6 +1124,7 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(picker);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
             });
 
 
@@ -1212,6 +1216,7 @@ namespace AutoGenerateForm.Uwp
                 field.Stack.Children.Add(box);
                 field.Stack.Children.Add(txterror);
                 fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
             });
 
 
