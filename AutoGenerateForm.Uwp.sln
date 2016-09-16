@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoGenerateForm.Uwp", "AutoGenerateForm.Uwp\AutoGenerateForm.Uwp.csproj", "{28C99822-F5D6-40A0-B216-CA10AADC3061}"
 EndProject
@@ -162,6 +162,8 @@ Global
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Release|x86.Build.0 = Release|x86
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Release|x86.Deploy.0 = Release|x86
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|Any CPU.Build.0 = Debug|x86
+		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.ActiveCfg = Debug|ARM
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.Build.0 = Debug|ARM
 		{323417B6-6EB0-42CE-9257-E4CC38111648}.Debug|ARM.Deploy.0 = Debug|ARM
