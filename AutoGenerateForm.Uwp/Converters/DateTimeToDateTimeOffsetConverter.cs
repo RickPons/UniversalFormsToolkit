@@ -9,6 +9,9 @@ namespace AutoGenerateForm.Uwp.Converters
         {
             try
             {
+                if (value == null)
+                    return DateTimeOffset.Now;
+
                 DateTime date = (DateTime) value;
                 return new DateTimeOffset(date);
             }
@@ -22,6 +25,9 @@ namespace AutoGenerateForm.Uwp.Converters
         {
             try
             {
+                if (value == null)
+                    return DateTime.Now;
+
                 DateTimeOffset dto = (DateTimeOffset) value;
                 return dto.DateTime;
             }

@@ -3,8 +3,11 @@ namespace AutoGenerateForm.Uwp.Controls
 {
     internal class FieldContainerControl:ContentControl
     {
+
+    
         public FieldContainerControl()
         {
+          
             HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch;
             VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch;
             HorizontalContentAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch;
@@ -13,6 +16,7 @@ namespace AutoGenerateForm.Uwp.Controls
             this.Content = Stack;
         }
 
+      
 
         public StackPanel Stack { get; set; }
 

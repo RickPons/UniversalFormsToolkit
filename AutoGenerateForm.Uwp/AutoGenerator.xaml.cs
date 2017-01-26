@@ -1,4 +1,5 @@
 ﻿using AutoGenerateForm.Attributes;
+using AutoGenerateForm.Uwp.Controls;
 using AutoGenerateForm.Uwp.Events;
 using AutoGenerateForm.Uwp.Models;
 using Callisto.Controls;
@@ -50,11 +51,36 @@ namespace AutoGenerateForm.Uwp
                 this.fields = new ObservableCollection<Controls.FieldContainerControl>();
                 dispatcher = CoreApplication.MainView.CoreWindow.Dispatcher;
                 this.OnFormCreated += AutoGenerator_OnFormCreated;
+                this.Unloaded += AutoGenerator_Unloaded;
             }
 
 
         }
 
+        private void AutoGenerator_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if (listView != null && listView.Items != null && listView.Items.Any())
+
+                foreach (var item in listView.Items)
+                {
+                    var field = item as FieldContainerControl;
+                    if (field != null)
+                    {
+                        var stack = field.Content as StackPanel;
+                        if (stack != null && stack.Children != null)
+                        {
+                            var control = stack.Children.OfType<Control>().FirstOrDefault();
+                            if (control != null)
+                            {
+                                control.KeyDown -= Control_KeyDown;
+                            }
+
+                        }
+                    }
+                  
+                }
+
+        }
 
         public object CurrentDataContext
         {
@@ -87,6 +113,7 @@ namespace AutoGenerateForm.Uwp
                     }
                     else
                     {
+
                         control.listView.ItemsSource = null;
                         control.listView.ItemsSource = control.fields;
 
@@ -95,6 +122,7 @@ namespace AutoGenerateForm.Uwp
                             var element = item as Controls.FieldContainerControl;
                             if (element != null)
                             {
+                                
                                 control.SetVisibilityListViewItem(element);
                                 control.RefreshBinding(element, e.NewValue);
                                
@@ -110,6 +138,7 @@ namespace AutoGenerateForm.Uwp
 
         }
 
+      
         private async void AutoGenerator_OnFormCreated(object sender, FormCreatedEventArgs e)
         {
             await Task.Delay(ValidationDelay);
@@ -120,6 +149,20 @@ namespace AutoGenerateForm.Uwp
 
                 foreach (var item in listView.Items)
                 {
+                    var field = item as FieldContainerControl;
+                    if (field != null)
+                    {
+                        var stack = field.Content as StackPanel;
+                        if (stack != null && stack.Children!=null)
+                        {
+                            var control = stack.Children.OfType<Control>().FirstOrDefault();
+                            if (control != null)
+                            {
+                                control.KeyDown += Control_KeyDown;
+                            }
+                            
+                        }
+                    }
                     SetVisibilityListViewItem(item);
                 }
 
@@ -127,6 +170,58 @@ namespace AutoGenerateForm.Uwp
 
         }
 
+        private void Control_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+          if(e.Key== Windows.System.VirtualKey.Tab)
+            {
+               // e.Handled = true;
+                var originalSource = (Control)e.OriginalSource;
+                int index = 0;
+                var items = listView.Items;
+                if (items != null)
+                {
+                    foreach (var item in items)
+                    {
+                        if (originalSource.DataContext == item)
+                        {
+                            break;
+                        }
+
+                        ++index;
+                    }
+
+                    index = (index + 1) % items.Count;
+                    ListViewItem container = (ListViewItem)listView.ContainerFromIndex(index);
+                    var nextControl = FindVisualChild<Control>(container);
+                    nextControl?.Focus(FocusState.Programmatic);
+                   
+                }
+
+            }
+        }
+        private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
+        {
+            if (parent != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(parent, i);
+                    T candidate = child as T;
+                    if (candidate != null)
+                    {
+                        return candidate;
+                    }
+
+                    T childOfChild = FindVisualChild<T>(child);
+                    if (childOfChild != null)
+                    {
+                        return childOfChild;
+                    }
+                }
+            }
+
+            return default(T);
+        }
         private void SetVisibilityListViewItem(object item)
         {
             var listitem = listView.ContainerFromItem(item) as ListViewItem;
