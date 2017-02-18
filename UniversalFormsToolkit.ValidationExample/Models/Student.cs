@@ -46,6 +46,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [AutoGenerateProperty]
         [Display("Last Name")]
         [IsVisible("HideBirthDay")]
+        [IsEnabledProperty(false)]
         public string LastName
         {
             get { return lastName; }
@@ -64,6 +65,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [IsVisible("HideBirthDay")]
         [AutoGenerateProperty]
         [Display("Age")]
+     
         public int Age
         {
             get { return age; }
@@ -80,6 +82,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [StringLength(4)]
         [IsVisible("HideBirthDay")]
         [Subtitle("My Subtitle")]
+      
         public string PhoneNumber
         {
             get
@@ -128,6 +131,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
 
         [AutoGenerateProperty]
         [Display("Birthday")]
+
       
         public DateTime? BirthDay
         {
@@ -142,6 +146,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         private bool isGraduated;
         [AutoGenerateProperty]
         [Display("Is Graduated")]
+     
         public bool IsGraduated
         {
             get { return isGraduated; }

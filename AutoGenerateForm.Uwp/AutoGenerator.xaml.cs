@@ -191,13 +191,44 @@ namespace AutoGenerateForm.Uwp
                     }
 
                     index = (index + 1) % items.Count;
-                    ListViewItem container = (ListViewItem)listView.ContainerFromIndex(index);
-                    var nextControl = FindVisualChild<Control>(container);
+                    var nextControl = GetFocusableControl(index);
                     nextControl?.Focus(FocusState.Programmatic);
                    
                 }
 
             }
+        }
+
+        private Control GetFocusableControl(int index)
+        {
+            var container = (ListViewItem)listView.ContainerFromIndex(index);
+            var nextControl = FindVisualChild<Control>(container);
+            if (nextControl != null)
+            {
+                var field = nextControl as FieldContainerControl;
+                if (field != null)
+                {
+                    var stack = field.Content as StackPanel;
+                    if (stack != null)
+                    {
+                        var internalControl = FindVisualChild<Control>(stack);
+                        if (internalControl != null)
+                        {
+                            if (!internalControl.IsEnabled || internalControl.Visibility != Visibility.Visible)
+                            {
+                                if (index < listView.Items.Count)
+                                {
+                                    index += 1;
+                                   return GetFocusableControl(index);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            return nextControl;
+           
         }
         private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
         {
