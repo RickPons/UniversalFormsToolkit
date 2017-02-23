@@ -31,7 +31,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
 
         [AutoGenerateProperty]
         [Display("Name")]
-        [IsVisible("HideBirthDay")]
+      
         public string Name
         {
             get { return name; }
@@ -46,7 +46,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [AutoGenerateProperty]
         [Display("Last Name")]
         [IsVisible("HideBirthDay")]
-        [IsEnabledProperty(false)]
+        
         public string LastName
         {
             get { return lastName; }
@@ -62,7 +62,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [Range(0,1000)]
         [DecimalCount(2)]
         [AutoIncrement(2)]
-        [IsVisible("HideBirthDay")]
+     
         [AutoGenerateProperty]
         [Display("Age")]
      
@@ -80,7 +80,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [AutoGenerateProperty]
         [Display("Phone Number")]
         [StringLength(4)]
-        [IsVisible("HideBirthDay")]
+       
         [Subtitle("My Subtitle")]
       
         public string PhoneNumber
@@ -101,8 +101,7 @@ namespace UniversalFormsToolkit.ValidationExample.Models
         [AutoGenerateProperty]
         [DisplayMemberPathCollection("Name")]
         [SelectedItemCollection("SelectedCourse")]
-        [IsVisible("HideBirthDay")]
-
+       
         public ObservableCollection<Course> Courses
         {
             get { return courses; }

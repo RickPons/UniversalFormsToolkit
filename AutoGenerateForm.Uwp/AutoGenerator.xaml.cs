@@ -208,20 +208,32 @@ namespace AutoGenerateForm.Uwp
                 var field = nextControl as FieldContainerControl;
                 if (field != null)
                 {
-                    var stack = field.Content as StackPanel;
-                    if (stack != null)
+                    if(field.Visibility== Visibility.Visible)
                     {
-                        var internalControl = FindVisualChild<Control>(stack);
-                        if (internalControl != null)
+                        var stack = field.Content as StackPanel;
+                        if (stack != null)
                         {
-                            if (!internalControl.IsEnabled || internalControl.Visibility != Visibility.Visible)
+                            var internalControl = FindVisualChild<Control>(stack);
+                            if (internalControl != null)
                             {
-                                if (index < listView.Items.Count)
+                                if (!internalControl.IsEnabled || internalControl.Visibility != Visibility.Visible)
                                 {
-                                    index += 1;
-                                   return GetFocusableControl(index);
+                                    if (index < listView.Items.Count)
+                                    {
+                                        index += 1;
+                                        return GetFocusableControl(index);
+                                    }
                                 }
                             }
+                        }
+
+                    }
+                    else
+                    {
+                        if (index < listView.Items.Count)
+                        {
+                            index += 1;
+                            return GetFocusableControl(index);
                         }
                     }
 
