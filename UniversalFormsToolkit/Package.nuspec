@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.16</version>
+    <version>1.0.17</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -24,6 +24,9 @@
       See also
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
+
+      1.0.17
+      - Added support to use Tab key to navigate in the form and detect collapsed controls
 
       1.0.16
       - Added support to use Tab key to navigate in the form and detect disabled controls
