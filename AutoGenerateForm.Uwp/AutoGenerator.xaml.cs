@@ -49,7 +49,7 @@ namespace AutoGenerateForm.Uwp
 
             
                 this.fields = new ObservableCollection<Controls.FieldContainerControl>();
-                dispatcher = CoreApplication.MainView.CoreWindow.Dispatcher;
+                dispatcher = CoreApplication.GetCurrentView().Dispatcher;
                 this.OnFormCreated += AutoGenerator_OnFormCreated;
                 this.Unloaded += AutoGenerator_Unloaded;
             }
