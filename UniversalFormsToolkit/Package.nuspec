@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.18</version>
+    <version>1.0.19</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -25,9 +25,12 @@
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
 
+
+      1.0.19
+      - Fixed bug with TimePicker
       1.0.18
       - Fixed bug with the dispatcher of the App
-      
+
       1.0.17
       - Added support to use Tab key to navigate in the form and detect collapsed controls
 
