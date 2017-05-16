@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AutoGeneratePropertyAttribute.cs" />
     <Compile Include="AutoIncrementAttribute.cs" />
+    <Compile Include="ClockIdentifierAttribute.cs" />
     <Compile Include="DecimalCountAttribute.cs" />
     <Compile Include="DefaultModuleViewAttribute.cs" />
     <Compile Include="DisplayAttribute.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="IsVisibleAttribute.cs" />
     <Compile Include="MenuOrderAttribute.cs" />
     <Compile Include="MinMaxSizeAttribute.cs" />
+    <Compile Include="MinuteIncrementAttribute.cs" />
     <Compile Include="MultilineAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyOrderAttribute.cs" />

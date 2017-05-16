@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Windows.Globalization;
 using AutoGenerateForm.Helpers;
 
 namespace UniversalFormsToolkit.ValidationExample.Models
@@ -155,6 +156,24 @@ namespace UniversalFormsToolkit.ValidationExample.Models
                 NotifyPropertyChanged();
             }
         }
+
+        private TimeSpan timeToEnter;
+
+
+        [AutoGenerateProperty]
+        [Display("Time to enter to the School")]
+        [MinuteIncrement(5)]
+        [ClockIdentifier(true)]
+        public TimeSpan TimeToEnter
+        {
+            get { return timeToEnter; }
+            set
+            {
+                timeToEnter = value;
+                NotifyPropertyChanged();
+            }
+        }
+
 
         #region Validations
 

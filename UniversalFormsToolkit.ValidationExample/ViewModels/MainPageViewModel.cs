@@ -62,7 +62,8 @@ namespace UniversalFormsToolkit.ValidationExample.ViewModels
                       Name="Ricardo",
                        BirthDay= null,
                        LastName="Pons",
-                        Courses= new ObservableCollection<Course>(list)
+                        Courses= new ObservableCollection<Course>(list),
+                         TimeToEnter = new TimeSpan(0,13,5,20)
                 },
                 new Student
                 {

@@ -609,7 +609,7 @@ namespace AutoGenerateForm.Uwp
 
                 return dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {
-                    GenerateDateTimePicker(property, parentProperty);
+                    GenerateTimePicker(property, parentProperty);
                 }).AsTask();
 
 
@@ -693,6 +693,109 @@ namespace AutoGenerateForm.Uwp
             fields.Add(field);
 
             CheckIsVisible(field, parentProperty, property);
+
+        }
+
+        private async void GenerateTimePicker(PropertyInfo property, PropertyInfo parentProperty)
+        {
+            TimePicker num = new TimePicker();
+
+            var minuteAttr = Helpers.AttributeHelper<MinuteIncrementAttribute>.GetAttributeValue(property);
+            if (minuteAttr != null)
+            {
+                 num.MinuteIncrement = minuteAttr.Number;
+
+            }
+            var clock = Helpers.AttributeHelper<ClockIdentifierAttribute>.GetAttributeValue(property);
+            if (clock!=null)
+            {
+                num.ClockIdentifier = clock.ClockFormat;
+            }
+            TextBlock txterror;
+            var binding = new Windows.UI.Xaml.Data.Binding();
+            if (parentProperty != null)
+            {
+                binding.Path = new PropertyPath(parentProperty.Name + "." + property.Name);
+                num.Name = parentProperty.Name + "_" + property.Name;
+                txterror = GenerateErrorField(num.Name);
+            }
+            else
+            {
+                binding.Path = new PropertyPath(property.Name);
+                num.Name = property.Name;
+                txterror = GenerateErrorField(num.Name);
+            }
+            binding.Source = CurrentDataContext;
+            binding.Mode = BindingMode.TwoWay;
+            // binding.NotifyOnValidationError = true;
+            binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+            num.SetBinding(TimePicker.TimeProperty, binding);
+
+            TextBlock label = new TextBlock();
+            var displayAttribute = Helpers.AttributeHelper<DisplayAttribute>.GetAttributeValue(property);
+            if (displayAttribute != null)
+            {
+                label.Text = displayAttribute.Label;
+            }
+            else
+            {
+                label.Text = property.Name;
+            }
+            object sub = null;
+            var subTitleAttribute = Helpers.AttributeHelper<SubtitleAttribute>.GetAttributeValue(property);
+            if (subTitleAttribute != null)
+            {
+                sub = SubTitleTextBlock(subTitleAttribute.SubTitle);
+
+            }
+            var isEnabledAttribute = Helpers.AttributeHelper<IsEnabledPropertyAttribute>.GetAttributeValue(property);
+            if (isEnabledAttribute != null)
+            {
+                if (!string.IsNullOrEmpty(isEnabledAttribute.PropertyToBind))
+                {
+                    var bindig3 = new Windows.UI.Xaml.Data.Binding();
+                    bindig3.Source = CurrentDataContext;
+
+                    if (parentProperty != null)
+                    {
+                        bindig3.Path = new PropertyPath(parentProperty.Name + "." + isEnabledAttribute.PropertyToBind);
+                    }
+                    else
+                    {
+                        bindig3.Path = new PropertyPath(isEnabledAttribute.PropertyToBind);
+                    }
+
+                    bindig3.Mode = BindingMode.TwoWay;
+                    bindig3.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+                    num.SetBinding(TextBox.IsEnabledProperty, bindig3);
+                }
+                else
+                {
+                    if (isEnabledAttribute.IsEnabled)
+                    {
+                        num.IsEnabled = true;
+                    }
+                    else
+                    {
+                        num.IsEnabled = false;
+                    }
+                }
+            }
+
+
+            await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                var field = new Controls.FieldContainerControl();
+                if (sub != null)
+                {
+                    field.Stack.Children.Add((TextBlock)sub);
+                }
+                field.Stack.Children.Add(label);
+                field.Stack.Children.Add(num);
+                field.Stack.Children.Add(txterror);
+                fields.Add(field);
+                CheckIsVisible(field, parentProperty, property);
+            });
 
         }
 
