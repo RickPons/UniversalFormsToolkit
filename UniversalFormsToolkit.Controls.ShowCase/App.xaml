@@ -1,0 +1,8 @@
+﻿<prismUnity:PrismUnityApplication
+    x:Class="UniversalFormsToolkit.Controls.ShowCase.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prismUnity="using:Prism.Unity.Windows"
+    xmlns:local="using:UniversalFormsToolkit.Controls.ShowCase">
+ 
+</prismUnity:PrismUnityApplication>
