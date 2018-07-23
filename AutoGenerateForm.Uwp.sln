@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.Prism
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.Controls.ShowCase", "UniversalFormsToolkit.Controls.ShowCase\UniversalFormsToolkit.Controls.ShowCase.csproj", "{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrismControls", "PrismControls", "{4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -290,6 +292,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30} = {4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}
+		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9} = {4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {218D3861-E795-48F5-BECD-C1B5BB4452C1}

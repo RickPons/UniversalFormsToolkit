@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.19</version>
+    <version>1.0.20</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -25,7 +25,8 @@
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
 
-
+      1.0.20
+      - Fixed bug with TimePicker with Time Value
       1.0.19
       - Fixed bug with TimePicker
       1.0.18

@@ -37,7 +37,6 @@ namespace UniversalFormsToolkit.Prism.Controls.Services
 
         public DialogService()
         {
-            //  appService = IoC.Get<IAppService>();
             Window.Current.CoreWindow.SizeChanged += CoreWindow_SizeChanged;
         }
 
