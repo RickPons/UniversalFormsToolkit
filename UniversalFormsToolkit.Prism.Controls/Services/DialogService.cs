@@ -43,7 +43,23 @@ namespace UniversalFormsToolkit.Prism.Controls.Services
 
         private void CoreWindow_SizeChanged(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.WindowSizeChangedEventArgs args)
         {
-           
+            if (args.Size.IsEmpty)
+                return;
+          var popups=  VisualTreeHelper.GetOpenPopups(Window.Current);
+            if (popups != null)
+            {
+              var modal=  popups.FirstOrDefault(x => x.Name == "ModalPopup");
+                if (modal != null)
+                {
+                    var child = modal.Child as FrameworkElement;
+
+            
+                    modal.Width = args.Size.Width;
+                    modal.Height = args.Size.Height;
+                    child.Width = args.Size.Width;
+                    child.Height = args.Size.Height;
+                }
+            }
         }
 
         public event EventHandler<DialogClosedEventArgs> DialogClosed;
@@ -314,14 +330,7 @@ namespace UniversalFormsToolkit.Prism.Controls.Services
             customDialog.CancelButtonForeground = dialogParameters.CancelButtonForeground;
         }
 
-        private void ClearContent()
-        {
-            //contentDialog.Title = "";
-            //var container = contentDialog.FindName("Container") as ContentControl;
-            //if (container != null)
-            //    container.Content = null;
-        }
-
+       
 
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
