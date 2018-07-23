@@ -11,6 +11,7 @@ Window Manager(In Progress)
 
 More details about the controls here.
 
+https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/CONTROLS_README.md
 
 ## Nuget Package
 
