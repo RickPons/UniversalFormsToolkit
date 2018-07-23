@@ -7,6 +7,7 @@ This framework has an small set of useful controls to help developers to build U
 ## Featured Controls
 
 Modal Dialog(Completed)
+
 Window Manager(In Progress)
 
 More details about the controls here.
