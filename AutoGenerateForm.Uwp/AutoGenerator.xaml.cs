@@ -19,7 +19,6 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Animation;
 using WinRTXamlToolkit.Controls.Extensions;
 namespace AutoGenerateForm.Uwp
 {
@@ -36,8 +35,7 @@ namespace AutoGenerateForm.Uwp
 
         private bool isLoaded;
         private CoreDispatcher dispatcher = null;
-        private object oldDataContext = null;
-        private bool isRefreshed, isReset;
+   
 
         public event EventHandler<FormCreatedEventArgs> OnFormCreated;
         public AutoGenerator()
