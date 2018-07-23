@@ -2,6 +2,22 @@
 
 This small UWP framework for Windows 10 builds input forms that can be used in your views based only on you classes defined in your model's folder. 
 
+This framework has an small set of useful controls to help developers to build UWP Applications with PRISM Framework
+
+## Featured Controls
+
+Modal Dialog(Completed)
+
+Window Manager(In Progress)
+
+More details about the controls here.
+
+https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/CONTROLS_README.md
+
+## Nuget Package
+
+https://www.nuget.org/packages/UniversalFormsToolkit.Prism.Controls/
+
 
 ## Features: 
 
