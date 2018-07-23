@@ -393,6 +393,16 @@ namespace AutoGenerateForm.Uwp
                  }
 
              })
+              .Case((TimePicker x) =>
+              {
+                  BindingExpression bindexpr = x.GetBindingExpression(TimePicker.TimeProperty  );
+                  if (bindexpr != null && bindexpr.ParentBinding != null)
+                  {
+                      binding.Path = bindexpr.ParentBinding.Path;
+                      x.SetBinding(TimePicker.TimeProperty, binding);
+                  }
+
+              })
              .Case((CheckBox x) =>
              {
 
