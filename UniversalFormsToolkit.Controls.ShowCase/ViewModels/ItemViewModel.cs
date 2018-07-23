@@ -35,10 +35,7 @@ namespace UniversalFormsToolkit.Controls.ShowCase.ViewModels
             CancelLabel = "Cancel";
         }
 
-        private void DialogService_DialogClosed(object sender, Prism.Controls.Events.DialogClosedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+    
 
         private void CancelCommandExecute()
         {
