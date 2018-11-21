@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <!--*-->
+    <id>UniversalFormsToolkit.Prism.Controls</id>
+    <!--*-->
+    <version>1.1.0</version>
+    <title>UniversalFormsToolkit.Prism.Controls</title>
+    <!--*-->
+    <authors>Ricardo Pons</authors>
+    <owners>Ricardo Pons</owners>
+    <!--
+    <licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--*-->
+    <description>Set of controls part of UniversalForms Toolkit</description>
+    <!--*-->
+    <releaseNotes>Updated Nuget Packages</releaseNotes>
+    <copyright>Copyright ©  2018</copyright>
+    <tags>
+    </tags>
+    <dependencies>
+      <!--
+      <dependency id="SampleDependency" version="1.0" />
+-->
+    </dependencies>
+  </metadata>
+</package>
