@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
     "Callisto": "1.4.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9",
     "Microsoft.Xaml.Behaviors.Uwp.Managed": "2.0.0",
     "WinRTXamlToolkit": "2.3.0"
   },
