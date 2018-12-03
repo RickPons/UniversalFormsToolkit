@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.21</version>
+    <version>1.0.22</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -25,6 +25,8 @@
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
 
+      1.0.22
+      - Downgraded Nuget Packages because there is a bug in the Microsoft Store 
       1.0.21
       - Fixed some bugs, updated nuget packages
       1.0.20
