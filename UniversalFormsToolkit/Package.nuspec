@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UniversalFormsToolkit</id>
-    <version>1.0.23</version>
+    <version>1.0.24</version>
     <title>UniversalFormsToolkit</title>
     <authors>Ricardo Pons</authors>
     <owners>Ricardo Pons</owners>
@@ -25,11 +25,12 @@
       - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
       - You can use your own logic to validate your bussines objects.
 
-      
+      1.0.24
+      Updated Projects
       1.0.23
       Updated to NetStandard 2.0
       1.0.22
-      - Downgraded Nuget Packages because there is a bug in the Microsoft Store 
+      - Downgraded Nuget Packages because there is a bug in the Microsoft Store
       1.0.21
       - Fixed some bugs, updated nuget packages
       1.0.20
@@ -74,12 +75,12 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/License</licenseUrl>
-    <copyright>Copyright  2016</copyright>
+    <copyright>Copyright  2019</copyright>
     <dependencies>
         <group targetFramework="uap10.0">
-          <dependency id="winrtxamltoolkit" version="2.0.0" />
+          <dependency id="winrtxamltoolkit" version="2.3.0" />
           <dependency id="Callisto"  version="1.4.0"/>
-          <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="1.1.0"/>
+          <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="2.0.1"/>
         </group>
     </dependencies>
     <references></references>
