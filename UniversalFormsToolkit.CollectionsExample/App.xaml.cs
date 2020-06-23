@@ -18,9 +18,6 @@ namespace UniversalFormsToolkit.CollectionsExample
         /// </summary>
         public App()
         {
-            Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
-                Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
-                Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -77,7 +74,7 @@ namespace UniversalFormsToolkit.CollectionsExample
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
-        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        private void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }

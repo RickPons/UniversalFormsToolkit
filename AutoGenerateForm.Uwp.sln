@@ -5,23 +5,15 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoGenerateForm.Uwp", "AutoGenerateForm.Uwp\AutoGenerateForm.Uwp.csproj", "{28C99822-F5D6-40A0-B216-CA10AADC3061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoGenerateForm.Helpers", "AutoGenerateForm.Helpers\AutoGenerateForm.Helpers.csproj", "{E60D88D4-7B9C-4285-8E62-26C2E7E2A88A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoGenerateForm.Helpers", "AutoGenerateForm.Helpers\AutoGenerateForm.Helpers.csproj", "{E60D88D4-7B9C-4285-8E62-26C2E7E2A88A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoGenerateForm.Attributes", "AutoGenerateForm.Attributes\AutoGenerateForm.Attributes.csproj", "{82EC126F-CA70-4B5E-8759-1C58E9CE2C39}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit", "UniversalFormsToolkit\UniversalFormsToolkit.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoGenerateForm.Attributes", "AutoGenerateForm.Attributes\AutoGenerateForm.Attributes.csproj", "{82EC126F-CA70-4B5E-8759-1C58E9CE2C39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.BasicExample", "UniversalFormsToolkit.BasicExample\UniversalFormsToolkit.BasicExample.csproj", "{8A350D11-A7AE-4881-B4E1-E229CD406FA4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.CollectionsExample", "UniversalFormsToolkit.CollectionsExample\UniversalFormsToolkit.CollectionsExample.csproj", "{323417B6-6EB0-42CE-9257-E4CC38111648}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.ValidationExample", "UniversalFormsToolkit.ValidationExample\UniversalFormsToolkit.ValidationExample.csproj", "{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.Prism.Controls", "UniversalFormsToolkit.Prism.Controls\UniversalFormsToolkit.Prism.Controls.csproj", "{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalFormsToolkit.Controls.ShowCase", "UniversalFormsToolkit.Controls.ShowCase\UniversalFormsToolkit.Controls.ShowCase.csproj", "{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrismControls", "PrismControls", "{4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,30 +103,6 @@ Global
 		{82EC126F-CA70-4B5E-8759-1C58E9CE2C39}.Release|x64.Build.0 = Release|Any CPU
 		{82EC126F-CA70-4B5E-8759-1C58E9CE2C39}.Release|x86.ActiveCfg = Release|Any CPU
 		{82EC126F-CA70-4B5E-8759-1C58E9CE2C39}.Release|x86.Build.0 = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|ARM.Build.0 = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|x64.Build.0 = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|x86.Build.0 = Debug|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|Any CPU.ActiveCfg = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|Any CPU.Build.0 = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|ARM.ActiveCfg = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|ARM.Build.0 = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|x64.ActiveCfg = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|x64.Build.0 = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|x86.ActiveCfg = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Native Release|x86.Build.0 = Native Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|ARM.ActiveCfg = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|ARM.Build.0 = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|x64.ActiveCfg = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|x64.Build.0 = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|x86.ActiveCfg = Release|Any CPU
-		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|x86.Build.0 = Release|Any CPU
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Debug|Any CPU.Build.0 = Debug|x86
 		{8A350D11-A7AE-4881-B4E1-E229CD406FA4}.Debug|Any CPU.Deploy.0 = Debug|x86
@@ -231,71 +199,9 @@ Global
 		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.ActiveCfg = Release|x86
 		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.Build.0 = Release|x86
 		{BEBC2C3E-E6CC-4C21-9914-10AB3DCDF023}.Release|x86.Deploy.0 = Release|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|ARM.ActiveCfg = Debug|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|ARM.Build.0 = Debug|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|x64.ActiveCfg = Debug|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|x64.Build.0 = Debug|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|x86.ActiveCfg = Debug|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Debug|x86.Build.0 = Debug|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|Any CPU.Build.0 = Release|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|ARM.ActiveCfg = Release|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|ARM.Build.0 = Release|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|x64.ActiveCfg = Release|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|x64.Build.0 = Release|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|x86.ActiveCfg = Release|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Native Release|x86.Build.0 = Release|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|ARM.ActiveCfg = Release|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|ARM.Build.0 = Release|ARM
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|x64.ActiveCfg = Release|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|x64.Build.0 = Release|x64
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|x86.ActiveCfg = Release|x86
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30}.Release|x86.Build.0 = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|Any CPU.Build.0 = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|Any CPU.Deploy.0 = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|ARM.ActiveCfg = Debug|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|ARM.Build.0 = Debug|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|ARM.Deploy.0 = Debug|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x64.ActiveCfg = Debug|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x64.Build.0 = Debug|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x64.Deploy.0 = Debug|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x86.ActiveCfg = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x86.Build.0 = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Debug|x86.Deploy.0 = Debug|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|Any CPU.ActiveCfg = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|Any CPU.Build.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|Any CPU.Deploy.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|ARM.ActiveCfg = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|ARM.Build.0 = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|ARM.Deploy.0 = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x64.ActiveCfg = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x64.Build.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x64.Deploy.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x86.ActiveCfg = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x86.Build.0 = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Native Release|x86.Deploy.0 = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|Any CPU.ActiveCfg = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|ARM.ActiveCfg = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|ARM.Build.0 = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|ARM.Deploy.0 = Release|ARM
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x64.ActiveCfg = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x64.Build.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x64.Deploy.0 = Release|x64
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x86.ActiveCfg = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x86.Build.0 = Release|x86
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E4CD5E0E-C4D3-4CF2-8B02-C3A27F94CC30} = {4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}
-		{968E7FFD-CA30-495D-81B7-A3938ACCD9D9} = {4F6FAAD3-1753-4C5C-BF2B-9A5DDF3CEE8E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {218D3861-E795-48F5-BECD-C1B5BB4452C1}
