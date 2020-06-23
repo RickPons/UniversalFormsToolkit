@@ -51,6 +51,16 @@
     <OutputPath>bin\Native Release\</OutputPath>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release64|AnyCPU'">
+    <OutputPath>bin\Release64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,14 +68,9 @@
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp.pri" />
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerator.xbf" />
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp\ValidationSummary.xbf" />
-    <None Include="NuGetPackage.ps1" />
-    <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
     <None Include="NuGet.config" />
     <None Include="Package.nuspec" />
-    <None Include="tools\init.ps1" />
-    <None Include="tools\install.ps1" />
-    <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\" />

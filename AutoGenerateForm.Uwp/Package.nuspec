@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>UniversalFormsToolkit</id>
+    <version>1.0.25</version>
+    <title>UniversalFormsToolkit</title>
+    <authors>Ricardo Pons</authors>
+    <owners>Ricardo Pons</owners>
+    <description>
+      This small framework will help you to build forms fast and easy in your UWP apps.
+    </description>
+    <releaseNotes>
+      https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/README.md
+
+      Build Forms for UWP Windows 10
+
+      Features
+      - Create a form based in a bussines Object
+      - Use attributes to set the order or the controls
+      - Support common controls like textbox,combobox,DateTimePicker,NumericUpdown etc..
+      - Build a read only form
+      - Supported a simple validation
+
+      See also
+      - UniversalFormsToolkit works better with validations using MVVM Validation Helpers.
+      - You can use your own logic to validate your bussines objects.
+
+      1.0.25
+      Updated Windows SDK Target to the latest
+      Updated Nuget Packages
+      Removed Support for PRISM
+
+      1.0.24
+      Updated Projects
+      1.0.23
+      Updated to NetStandard 2.0
+      1.0.22
+      - Downgraded Nuget Packages because there is a bug in the Microsoft Store
+      1.0.21
+      - Fixed some bugs, updated nuget packages
+      1.0.20
+      - Fixed bug with TimePicker with Time Value
+      1.0.19
+      - Fixed bug with TimePicker
+      1.0.18
+      - Fixed bug with the dispatcher of the App
+
+      1.0.17
+      - Added support to use Tab key to navigate in the form and detect collapsed controls
+
+      1.0.16
+      - Added support to use Tab key to navigate in the form and detect disabled controls
+
+      1.0.15
+      - Added support to use Tab key to navigate in the form
+
+      1.0.13
+      - Fixed some bugs with the minimum size of the items
+
+      1.0.11 Added more features
+      - Summary control
+      - Improved performance
+      - Fixed some bugs with some attributes
+
+      1.0.9 Fixed bugs with nullable datetime
+
+      1.07
+      fixed minor bugs
+
+      1.0.6
+      Fixed problems with the title of the form
+    </releaseNotes>
+    <summary>
+      This small framework will help you to build forms fast an easy in your UWP apps.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/RikardoPons/UniversalFormsToolkit</projectUrl>
+    <icon>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license>https://github.com/RikardoPons/UniversalFormsToolkit/blob/master/License</license>
+    <copyright>Copyright  2019</copyright>
+    <dependencies>
+      <group targetFramework="uap10.0">
+        <dependency id="winrtxamltoolkit" version="2.3.0" />
+        <dependency id="Callisto"  version="1.4.0" />
+        <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="2.0.1" />
+      </group>
+    </dependencies>
+    <references></references>
+    <tags>Windows 10, Universal Forms, universalFormstoolkit, form ,  Windows10, UAP, UWP, WinRT, XAML, Universal App, WinRT XAML Toolkit, MVVM Validation Helpers , winrtxamltoolkit </tags>
+  </metadata>
+  <files>
+    <file src="Nuget\lib\" target="lib" />
+    <file src="Nuget\tools\" target="tools" />
+    <file src="Nuget\content\" target="content" />
+  </files>
+</package>

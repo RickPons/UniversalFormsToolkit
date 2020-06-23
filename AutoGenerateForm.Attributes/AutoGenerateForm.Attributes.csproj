@@ -5,6 +5,7 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
+    <Configurations>Debug;Release;Release64</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
