@@ -150,8 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Nuget\content\" />
-    <Folder Include="Nuget\tools\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Callisto">
@@ -168,17 +166,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Nuget\lib\AutoGenerateForm.Uwp.pri" />
-    <None Include="Nuget\lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerator.xbf" />
-    <None Include="Nuget\lib\uap10.0\AutoGenerateForm.Uwp\ValidationSummary.xbf" />
     <None Include="Package.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="nuget.exe" />
-    <Content Include="Nuget\lib\AutoGenerateForm.Attributes.dll" />
-    <Content Include="Nuget\lib\AutoGenerateForm.Helpers.dll" />
-    <Content Include="Nuget\lib\AutoGenerateForm.Uwp.dll" />
-    <Content Include="Nuget\lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerateForm.Uwp.xr.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
@@ -250,19 +241,8 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetDir)\AutoGenerateForm.Uwp.xr.xml $(ProjectDir)Nuget\lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerateForm.Uwp.xr.xml
-
-copy /Y $(TargetDir)\AutoGenerator.xbf $(ProjectDir)Nuget\lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerator.xbf
-
-copy /Y $(TargetDir)\ValidationSummary.xbf $(ProjectDir)Nuget\lib\uap10.0\AutoGenerateForm.Uwp\ValidationSummary.xbf
-
-copy /Y $(TargetDir)\AutoGenerateForm.Attributes.dll $(ProjectDir)Nuget\lib\AutoGenerateForm.Attributes.dll
-
-copy /Y $(TargetDir)\AutoGenerateForm.Helpers.dll $(ProjectDir)Nuget\lib\AutoGenerateForm.Helpers.dll
-
-copy /Y $(TargetDir)\AutoGenerateForm.Uwp.dll $(ProjectDir)Nuget\lib\AutoGenerateForm.Uwp.dll
-
-copy /Y $(TargetDir)\AutoGenerateForm.Uwp.pri $(ProjectDir)Nuget\lib\AutoGenerateForm.Uwp.pri</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -68,7 +68,6 @@
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp.pri" />
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp\AutoGenerator.xbf" />
     <None Include="lib\uap10.0\AutoGenerateForm.Uwp\ValidationSummary.xbf" />
-    <None Include="NuGet.exe" />
     <None Include="NuGet.config" />
     <None Include="Package.nuspec" />
   </ItemGroup>
